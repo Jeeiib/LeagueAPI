@@ -1,0 +1,14 @@
+body {
+  background-color: #091724;
+  color: white;
+}
+
+.card:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.navbar-brand:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
