@@ -1,6 +1,11 @@
 body {
   background-color: #081428;
-  color: #C89B3B;
+  color: white;
+  font-family: 'Beaufort for LOL' ;
+}
+
+h1, h2, h3 {
+  color :#C89B3C
 }
 
 .card:hover {
@@ -8,7 +13,7 @@ body {
   scale: 1.1;
 }
 
-.navbar-brand:hover{
+.navbar-brand:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -16,4 +21,18 @@ body {
 .item-transform:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.skill-card img {
+  transition: transform 0.3s ease;
+}
+
+.skill-card img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card {
+  background-color:#081428;
+  color : white
 }

@@ -33,16 +33,16 @@ const ChampionsByTag = () => {
 
   useEffect(() => {
     const filteredChampions = champions.filter((champion) => {
-      return champion.name.toLowerCase().includes(searchValue.toLowerCase());
+      return champion[1].name.toLowerCase().includes(searchValue.toLowerCase());
     });
     setFilteredChampions(filteredChampions);
-  }, [searchValue]);
+  }, [searchValue, champions]);
 
   return (
-    <>
+    <> 
       <Container className="d-flex flex-column align-items-center">
-        <h1 style={{ fontSize: "4rem" }}>{tag}</h1>
-        <Form className="col-10 m-2 mb-4">
+        <h1 className="mt-3" style={{ fontSize: "4rem" }}>{tag}</h1>
+        <Form className="col-10 m-2 mb-5">
           <Form.Control
             type="text"
             placeholder="Rechercher un champion"

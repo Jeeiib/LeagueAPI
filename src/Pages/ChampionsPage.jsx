@@ -39,8 +39,8 @@ useEffect(() => {
   return (
     <>
       <Container className="d-flex flex-column align-items-center">
-        <h1 style={{ fontSize: "4rem" }}>Champions</h1>
-        <Form className="col-10 m-2 mb-4">
+        <h1 className="mt-3" style={{ fontSize: "4rem" }}>Champions</h1>
+        <Form className="col-10 m-2 mb-5">
           <Form.Control
             type="text"
             placeholder="Rechercher un champion"

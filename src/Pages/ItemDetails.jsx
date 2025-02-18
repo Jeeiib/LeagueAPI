@@ -36,7 +36,7 @@ const ItemDetails = () => {
   return (
     <>
       <Container className="d-flex flex-column align-items-center">
-        <h1>{item.name}</h1>
+        <h1 className="mt-5 mb-4">{item.name}</h1>
         <div className="d-flex justify-content-between w-100">
           {/* Section gauche avec l'image */}
           <div className="col-6">
