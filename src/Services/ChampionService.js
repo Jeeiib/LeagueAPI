@@ -9,8 +9,9 @@ function fetchChampionByName(name) {
 }
 
 
+
+
 export default {
 fetchChampions,
-fetchChampionByName
-
+fetchChampionByName,
 }

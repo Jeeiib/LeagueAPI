@@ -1,21 +1,23 @@
 import { use, useEffect, useState } from "react";
-import ChampionService from "../Services/ChampionService";
-import { Container, Form } from "react-bootstrap";
 import ChampionCard from "../Components/ChampionCard";
+import { useParams } from "react-router-dom";
+import { Container, Form } from "react-bootstrap";
+import ChampionService from "../Services/ChampionService";
 
-
-const HomePage = () => {
+const ChampionsByTag = () => {
+  const { tag } = useParams();
   const [champions, setChampions] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filteredChampions, setFilteredChampions] = useState([]);
 
-  const fetchChampions = async () => {
+  const fetchChampionsByTag = async () => {
     try {
       const response = await ChampionService.fetchChampions();
-      const ChampionsArray = Object.values(response.data.data);
-      setChampions(ChampionsArray);
-        setFilteredChampions(ChampionsArray);
-      console.log(response.data.data);
+      const championsArray = Object.entries(response.data.data).filter((currentTag) => {
+        return currentTag[1].tags.includes(tag);
+      });
+      setChampions(championsArray);
+        setFilteredChampions(championsArray);
     } catch (error) {
       console.error(error);
     }
@@ -26,20 +28,20 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    fetchChampions();
-  }, []);
+    fetchChampionsByTag();
+  }, [tag]);
 
-useEffect(() => {
+  useEffect(() => {
     const filteredChampions = champions.filter((champion) => {
-        return champion.name.toLowerCase().includes(searchValue.toLowerCase());
+      return champion.name.toLowerCase().includes(searchValue.toLowerCase());
     });
     setFilteredChampions(filteredChampions);
-}, [searchValue]);
+  }, [searchValue]);
 
   return (
     <>
       <Container className="d-flex flex-column align-items-center">
-        <h1 style={{ fontSize: "4rem" }}>Champions</h1>
+        <h1 style={{ fontSize: "4rem" }}>{tag}</h1>
         <Form className="col-10 m-2 mb-4">
           <Form.Control
             type="text"
@@ -49,7 +51,9 @@ useEffect(() => {
         </Form>
         <div className="d-flex flex-wrap justify-content-around gap-3">
           {filteredChampions.map((champion, index) => {
-            return <ChampionCard key={index} champion={champion} />
+            console.log(champion);
+            
+            return <ChampionCard key={index} champion={champion[1]} />;
           })}
         </div>
       </Container>
@@ -57,4 +61,4 @@ useEffect(() => {
   );
 };
 
-export default HomePage;
+export default ChampionsByTag;

@@ -1,6 +1,6 @@
 body {
-  background-color: #091724;
-  color: white;
+  background-color: #081428;
+  color: #C89B3B;
 }
 
 .card:hover {
@@ -9,6 +9,11 @@ body {
 }
 
 .navbar-brand:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.item-transform:hover {
   transform: scale(1.1);
   cursor: pointer;
 }

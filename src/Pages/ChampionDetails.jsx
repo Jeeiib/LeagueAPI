@@ -128,7 +128,11 @@ const ChampionDetails = () => {
                 <div className="d-flex flex-wrap gap-3 mt-3">
                     {champion.tags?.map((tag, index) => (
                     <div key={index} className="skill-card text-center">
-                       <Button variant="primary">{tag}</Button>
+                       <Button 
+                       variant="primary"
+                       onClick={() => navigate(`/champions/tag/${tag}`)}>
+                        {tag}
+                       </Button>
                     </div>
                     ))}
               </div>
