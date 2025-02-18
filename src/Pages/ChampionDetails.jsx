@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Button, Carousel, Container, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import ChampionService from "../Services/ChampionService";
 
@@ -165,6 +165,26 @@ const ChampionDetails = () => {
             </div>
           </div>
         </div>
+      </Container>
+      <Container>
+      <div className="mt-4 d-flex flex-column text-center">
+        <h2> Skins </h2>
+        <Carousel className="mt-3 mb-5" pause="hover">
+          {champion.skins?.map((skin, index) => (
+            <Carousel.Item key={index}>
+              <img
+                className="d-block w-100"
+                src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`}
+                alt={skin.name}
+                style={{ borderRadius: "25px" }}
+              />
+              <Carousel.Caption>
+                <h3>{skin.name}</h3>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+          </Carousel>
+          </div>
       </Container>
     </>
   );

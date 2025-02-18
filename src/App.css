@@ -42,11 +42,6 @@ h1, h2, h3 {
   color : white
 }
 
-.card:hover {
-  transition: box-shadow 0.3s ease;
-}
-
-
 .form-control {
   outline: none;
 }
