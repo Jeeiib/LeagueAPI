@@ -1,4 +1,4 @@
-body {
+body{
   background-color: #081428;
   color: white;
   font-family: 'Beaufort for LOL' ;
@@ -6,6 +6,11 @@ body {
 
 h1, h2, h3 {
   color :#C89B3C
+}
+
+.navbar {
+  border-bottom: 2px solid #C89B3C;
+  background-color: #081428;
 }
 
 .card:hover {
@@ -36,3 +41,19 @@ h1, h2, h3 {
   background-color:#081428;
   color : white
 }
+
+.card:hover {
+  transition: box-shadow 0.3s ease;
+}
+
+
+.form-control {
+  outline: none;
+}
+
+.form-control:focus {
+  border:#C89B3C solid 3px;
+  box-shadow: none;
+  outline: none;
+}
+

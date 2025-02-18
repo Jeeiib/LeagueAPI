@@ -6,8 +6,8 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand style={{marginLeft: "2rem"}} as={Link} to="/">League App</Navbar.Brand>
+    <Navbar style={{fontSize: "20px"}} variant="dark" expand="lg">
+      <Navbar.Brand style={{marginLeft: "2rem"}} as={Link} to="/">League API</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">

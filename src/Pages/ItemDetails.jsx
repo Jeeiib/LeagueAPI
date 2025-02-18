@@ -33,13 +33,12 @@ const ItemDetails = () => {
   }, [location.state]);
   console.log(item);
 
-  return (
-    <>
+  return <>
       <Container className="d-flex flex-column align-items-center">
-        <h1 className="mt-5 mb-4">{item.name}</h1>
+        <h1 className="mt-5 mb-4" style={{fontSize: "4rem"}}>{item.name}</h1>
         <div className="d-flex justify-content-between w-100">
           {/* Section gauche avec l'image */}
-          <div className="col-6">
+          <div className="col-6 d-flex justify-content-center">
             <div className="champion-image">
               <img
                 src={
@@ -47,7 +46,7 @@ const ItemDetails = () => {
                   `https://ddragon.leagueoflegends.com/cdn/13.24.1/img/item/${item.image.full}`
                 }
                 alt={item.name}
-                width={64}
+                width={150}
                 className="img-fluid"
                 style={{ borderRadius: "25px" }}
               />
@@ -58,13 +57,13 @@ const ItemDetails = () => {
           <div className="col-6 d-flex flex-column">
             <div>
               <h3>Description</h3>
-              <p dangerouslySetInnerHTML={{ __html: item.description }} />
+              <p style={{fontSize: "20px"}} dangerouslySetInnerHTML={{ __html: item.description }} />
             </div>
             <div className="champion-stats mt-4">
               <h3>Prix</h3>
               <div className="d-flex flex-column gap-2">
                 <div className="stat-item">
-                  <span>{item.gold && item.gold.total} pièces d'or</span>
+                  <span style={{fontSize: "20px"}}>{item.gold && item.gold.total} pièces d'or</span>
                 </div>
               </div>
             </div>
@@ -99,8 +98,7 @@ const ItemDetails = () => {
           </div>
         </div>
       </Container>
-    </>
-  );
+    </>;
 };
 
 export default ItemDetails;

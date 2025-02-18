@@ -24,8 +24,10 @@ const ChampionDetails = () => {
 
   return (
     <>
-      <Container className="d-flex flex-column align-items-center">
-        <h1 className="mt-5 mb-4">{champion.name}</h1>
+      <Container fluid className="d-flex flex-column align-items-center" style={{ maxWidth: "90%" }}>
+        <h1 className="mt-5 mb-4" style={{ fontSize: "4rem" }}>
+          {champion.name}
+        </h1>
         <div className="d-flex justify-content-between w-100">
           {/* Section gauche avec l'image */}
           <div className="col-6">
@@ -33,7 +35,7 @@ const ChampionDetails = () => {
               <img
                 src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`}
                 alt={champion.name}
-                width={600}
+                width={700}
                 className="img-fluid"
                 style={{ borderRadius: "25px" }}
               />
@@ -97,7 +99,7 @@ const ChampionDetails = () => {
           <div className="col-6 d-flex flex-column">
             <div className="mb-4">
               <h3>Description</h3>
-              <p>{champion.lore}</p>
+              <p style={{ fontSize: "20px" }}>{champion.lore}</p>
             </div>
             <div className="skills-section">
               <h3>Compétences Actives</h3>
