@@ -118,7 +118,7 @@ const ChampionDetails = () => {
                   >
                     <div key={index} className="skill-card text-center">
                       <img
-                        src={`https://ddragon.leagueoflegends.com/cdn/11.16.1/img/spell/${spell.image.full}`}
+                        src={`https://ddragon.leagueoflegends.com/cdn/15.3.1/img/spell/${spell.image.full}`}
                         alt={spell.name}
                         className="mb-2"
                       />
@@ -141,7 +141,7 @@ const ChampionDetails = () => {
                 >
                   <div className="skill-card text-center">
                     <img
-                      src={`https://ddragon.leagueoflegends.com/cdn/11.16.1/img/passive/${champion.passive?.image.full}`}
+                      src={`https://ddragon.leagueoflegends.com/cdn/15.3.1/img/passive/${champion.passive?.image.full}`}
                       alt={champion.passive?.name}
                       className="mb-2"
                     />
