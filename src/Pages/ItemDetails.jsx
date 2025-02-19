@@ -85,7 +85,7 @@ const ItemDetails = () => {
                 </div>
               </div>
             </div>
-            {item.into && (
+            {item.into && <>
               <div className="mt-4">
                 <h3>Se transforme en</h3>
                 <div className="d-flex flex-wrap gap-3 mt-4">
@@ -112,7 +112,8 @@ const ItemDetails = () => {
                   ))}
                 </div>
               </div>
-            )}
+              </>
+            }
           </div>
         </div>
       </Container>
