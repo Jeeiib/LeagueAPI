@@ -52,3 +52,22 @@ h1, h2, h3 {
   outline: none;
 }
 
+.game-placeholder::placeholder {
+  color: white !important;
+}
+
+.tag-button {
+  background-color: #C89B3C;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.tag-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+/* * {
+  border : solid red 2px;
+} */

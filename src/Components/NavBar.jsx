@@ -19,6 +19,7 @@ const NavBar = () => {
             ))}
           </NavDropdown>
           <Nav.Link as={Link} to="/items">Objets</Nav.Link>
+          <Nav.Link as={Link} to="/game">Quizz</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

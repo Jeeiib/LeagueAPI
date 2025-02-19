@@ -156,6 +156,8 @@ const ChampionDetails = () => {
                     <Button
                       variant="primary"
                       onClick={() => navigate(`/champions/tag/${tag}`)}
+                      style={{backgroundColor: "#C89B3C", border: "none"}}
+                      className="tag-button"
                     >
                       {tag}
                     </Button>
